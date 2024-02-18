@@ -9,6 +9,13 @@ library(tidyverse)
 library(dplyr)
 library(magrittr)
 
+library(doParallel)
+
+all_cores <- parallel::detectCores(logical = T)
+
+registerDoParallel(cores = all_cores)
+
+
 setwd("~/R")
 
 library(readxl)
